@@ -1,0 +1,7 @@
+{
+    "port": 8082,
+    "repositories": {
+        "hosted": "https://repo.sytm.de/repository/maven-hosted/"
+    },
+    "snapshotCleanInterval": "10m"
+}
