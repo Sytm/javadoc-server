@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "config:js-lib",
+    ":semanticCommitType(chore)"
+  ],
+  "packageRules": [
+    {
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ]
+}

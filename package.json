@@ -1,0 +1,42 @@
+{
+  "name": "javadoc-server",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "ava",
+    "best": "npm run build && npm run test",
+    "coverage:html": "c8 --reporter html npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sytm/javadoc-server.git"
+  },
+  "author": "Lukas Planz",
+  "license": "AGPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/Sytm/javadoc-server/issues"
+  },
+  "homepage": "https://github.com/Sytm/javadoc-server#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "2.34.0",
+    "@typescript-eslint/parser": "2.34.0",
+    "ava": "3.8.2",
+    "c8": "7.1.2",
+    "eslint": "7.0.0",
+    "husky": "4.2.5",
+    "lint-staged": "10.2.4",
+    "prettier": "2.0.5",
+    "typescript": "3.9.2"
+  }
+}
