@@ -1,5 +1,3 @@
-"use strict";
-
 module.exports = {
   env: {
     commonjs: true,
@@ -17,9 +15,15 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 2019,
+    sourceType: "module",
+    ecmaFeatures: {
+      modules: true,
+    },
   },
   plugins: ["@typescript-eslint"],
   rules: {
     strict: ["error", "global"],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars-experimental": "error",
   },
 };
