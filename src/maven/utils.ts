@@ -1,5 +1,3 @@
-"use strict";
-
 import { MavenArtifact } from ".";
 
 export default class MavenUtils {

@@ -1,5 +1,3 @@
-"use strict";
-
 import config from "../config";
 import { createClient, RedisClient } from "redis";
 import { MavenArtifact } from "../maven";
@@ -14,7 +12,7 @@ export default class Cache {
     }
 
     public setArtifactDownloadURL(this: Cache, artifact: MavenArtifact, downloadURL: string): void {
-        let key = MavenUtils.artifactToString(artifact);
+        const key = MavenUtils.artifactToString(artifact);
         if (artifact.isSnapshot) {
             this.redis.set(key, downloadURL, "EX", config.cache.snapshotExpireAfter);
         } else {

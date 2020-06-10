@@ -1,5 +1,3 @@
-"use strict";
-
 import { ClientOpts } from "redis";
 
 export interface JavadocServerConfig {

@@ -1,5 +1,3 @@
-"use strict";
-
 import MavenUtils from "./utils";
 
 export interface MavenArtifact {
